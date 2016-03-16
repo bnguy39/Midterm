@@ -1,0 +1,14 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+
+html, body, #mapDiv{
+        padding-top: 18px;
+        margin: 0;
+        height: 100%;
+
+        #BasemapToggle {
+          position: absolute;
+          top: 60px;
+          right: 20px;
+          z-index: 50;
+
+        }

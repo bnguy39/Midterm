@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- contains metadata for map-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Demographics</title> <!-- title for map-->
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.16/esri/css/esri.css">
+
+	<!-- Custom styles for this template -->
+    <link href="css/map3-Copy.css" rel="stylesheet">
+  </head>
+
+  <body>
+<!-- create navigation for map -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Home</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">  <!-- website links for nnavigation toolbar -->
+            <li><a href="http://server.arcgisonline.com/arcgis/rest/services/Demographics/USA_Unemployment_Rate/MapServer">Unemployment Rate</a></li>
+            <li><a href="http://server.arcgisonline.com/arcgis/rest/services/Demographics/USA_Diversity_Index/MapServer">Diversity Index</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <!-- tile and caption for map object -->
+      <div class="starter-template">
+        <h1>Demographics in the United States</h1>
+        <p class="lead">Diversity Index and Unemployment Rate.<br></p>
+		<div id="map"></div> <!-- add div element where you want map to be located-->
+    <div id="BasemapToggle"></div>
+	 </div>
+
+   <div class="container" data-dojo-type="dijit/layout/BorderContainer"
+   data-dojo-props="design:'headline',gutters:false">
+   <div id="layerListPane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'right'">
+       <div id="layerList"></div>
+   </div>
+   <div id="map" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'"></div>
+   </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+    <script>var dojoConfig = { parseOnLoad: true };</script>
+	<script src="https://js.arcgis.com/3.16/"></script>
+	<script src="js/map3-Copy.js"></script>
+  </body>
+</html>
