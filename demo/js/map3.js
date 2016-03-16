@@ -34,14 +34,14 @@ var toggle = new BasemapToggle({
 toggle.startup();
 });
 
-layer1.on("click", buildLayerList);
+layer1.on("load", buildLayerList);
 
 layer2.on("click", buildLayerList);
 
 layer3.on("click", buildLayerList);
 
 function buildLayerList() {
-  var items = arrayUtils.map(layer.layerInfos, function(info, index) {
+  var items = arrayUtils.map(layer.layer1Infos, function(info, index) {
     if (info.defaultVisibility) {
       visible.push(info.id);
     }
@@ -49,7 +49,7 @@ function buildLayerList() {
   });
   var ll = dom.byId("layer_list");
   ll.innerHTML = items.join(' ');
-  layer.setVisibleLayers(visible);
+  layer1.setVisibleLayers(visible);
   on(ll, "click", updateLayerVisibility);
 }
 
