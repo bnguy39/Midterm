@@ -41,7 +41,7 @@ layer2.on("click", buildLayerList);
 layer3.on("click", buildLayerList);
 
 function buildLayerList() {
-  var items = arrayUtils.map(layer.layer1Infos, function(info, index) {
+  var items = arrayUtils.map(layer.layerInfos, function(info, index) {
     if (info.defaultVisibility) {
       visible.push(info.id);
     }
@@ -49,7 +49,7 @@ function buildLayerList() {
   });
   var ll = dom.byId("layer_list");
   ll.innerHTML = items.join(' ');
-  layer1.setVisibleLayers(visible);
+  layer.setVisibleLayers(visible);
   on(ll, "click", updateLayerVisibility);
 }
 
