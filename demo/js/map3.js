@@ -36,6 +36,10 @@ toggle.startup();
 
 layer1.on("click", buildLayerList);
 
+layer2.on("click", buildLayerList);
+
+layer3.on("click", buildLayerList);
+
 function buildLayerList() {
   var items = arrayUtils.map(layer.layerInfos, function(info, index) {
     if (info.defaultVisibility) {
